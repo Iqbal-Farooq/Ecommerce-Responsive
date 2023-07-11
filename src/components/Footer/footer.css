@@ -1,0 +1,20 @@
+.footer{
+    width:100%;
+    background-color: darkslateblue;
+    /* border:2px solid red; */
+    position: fixed;
+    bottom: 0.1px;
+    left: 0;
+    padding: 1rem;
+    z-index: 2;
+
+}
+.footer_container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_container .links{
+    display: flex;
+    gap:2rem;
+}

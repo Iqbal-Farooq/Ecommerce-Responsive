@@ -1,0 +1,103 @@
+.contact_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    /* border: 2px solid red; */
+    margin-top: 5rem;
+}
+.contact_container form{
+    width:500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:1rem;
+    margin: auto;
+    /* border: 2px solid green; */
+    padding: 1rem;
+    border-radius: 5%;
+    /* background-color: darkgray; */
+    box-shadow: 0px 0px 25px rgb(5, 163, 166) ;
+    -webkit-border-radius: 5%;
+    -moz-border-radius: 5%;
+    -ms-border-radius: 5%;
+    -o-border-radius: 5%;
+}
+
+.contact_container form:hover { 
+    box-shadow: 0px 0px 25px aqua;
+    cursor:copy;
+}
+.contact_container form h2{
+    font-size: 30px;
+    font-weight: 500;
+    color:rgb(0, 102, 255);
+    letter-spacing: 8px;
+    text-transform: capitalize;
+}
+::placeholder {
+    color: blueviolet;
+    font-size: small;
+}
+.contact_container form textarea{
+    resize: none;
+    padding: 1rem;
+        width: 400px;
+        background: none;
+            border: none;
+            border-bottom: 2px solid navy;
+            transition: .2s;
+                font-size: 18px;
+                font-weight: bold;
+                color: darkmagenta;
+        border-radius: 2%;
+        -webkit-border-radius: 2%;
+        -moz-border-radius: 2%;
+        -ms-border-radius: 2%;
+        -o-border-radius: 2%;
+}
+.contact_container form input:active,
+.contact_container form input:hover,
+.contact_container form input:focus,
+.contact_container form textarea:focus,
+.contact_container form textarea:hover,
+.contact_container form textarea:active{
+    outline: none;
+    border-bottom-color:aqua;
+    cursor: pointer;
+}
+.contact_container form input{
+   height: 1rem;
+   padding: 1rem;
+   width: 400px;
+   /* background-color: darkgrey; */
+   background: none;
+   border: none;
+   border-bottom: 2px solid navy;
+   transition: .2s;
+   font-size: 28px;
+   font-weight: bold;
+   color:darkmagenta;
+   border-radius:2% ;
+   -webkit-border-radius:2% ;
+   -moz-border-radius:2% ;
+   -ms-border-radius:2% ;
+   -o-border-radius:2% ;
+   -webkit-transition: .2s;
+   -moz-transition: .2s;
+   -ms-transition: .2s;
+   -o-transition: .2s;
+}
+
+@media(max-width:600px){
+.contact_container form {
+        width: 350px;
+
+}
+
+.contact_container form input,.contact_container form textarea {
+    width: 250px;
+}
+
+}
