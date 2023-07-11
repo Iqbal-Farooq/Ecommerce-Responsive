@@ -5,6 +5,7 @@ import './App.css';
 import Footer from './components/Footer/Footer';
 import { Routes,Route } from 'react-router-dom';
 import About from './components/About/About';
+import Login from './components/Login/Login';
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
     <Route path='home' exact element={ <Home />}/>
     <Route path='about' exact element={<About/>}/>
     <Route path='contact' exact element={<Contact/>}/>
-    
+     <Route path='login' exact element={<Login/>}/>
     
     
   </Routes>

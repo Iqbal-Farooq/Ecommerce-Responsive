@@ -12,14 +12,22 @@
     align-items: center;
   
 }
+/* .nav_container a{
+    color: black;
+} */
+
 .active{
     background-color: var(--color-primary);
+  
     padding:0 0.4rem;
     border-radius: 10%;
     -webkit-border-radius: 10%;
     -moz-border-radius: 10%;
     -ms-border-radius: 10%;
     -o-border-radius: 10%;
+}
+.active a{
+    color:black;
 }
 .nav_maincontainer {
 display: flex;
