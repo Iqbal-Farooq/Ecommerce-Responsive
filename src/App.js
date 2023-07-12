@@ -6,6 +6,7 @@ import Footer from './components/Footer/Footer';
 import { Routes,Route } from 'react-router-dom';
 import About from './components/About/About';
 import Login from './components/Login/Login';
+import Products from './components/Products/Products';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
     <Route path='about' exact element={<About/>}/>
     <Route path='contact' exact element={<Contact/>}/>
      <Route path='login' exact element={<Login/>}/>
+     <Route path='products' exact element={<Products/>}/>
     
     
   </Routes>

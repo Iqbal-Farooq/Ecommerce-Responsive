@@ -54,6 +54,7 @@ const Nav = () => {
              <li  onClick={()=>SetNavActive("login")}
    className={navActive==="login"?'active':''}><Link to="login">Login</Link></li>
         </ul>
+        <div className='cart'>cart1</div>
        {
         !active ? <div className="toggle"
         onClick={toogle}>
