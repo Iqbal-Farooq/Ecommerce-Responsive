@@ -1,7 +1,8 @@
 import React, { useState,useEffect} from 'react'
 import {Link} from "react-router-dom"
 import "./nav.css"
-const Nav = () => {
+import Cart from '../Cart/Cart'
+const Nav = (props) => {
   const[active,setActive]=useState(false);
   const [navActive,SetNavActive]=useState("#");
    const[screenSize,setScreenSize]=useState(currentWidth());
@@ -54,7 +55,8 @@ const Nav = () => {
              <li  onClick={()=>SetNavActive("login")}
    className={navActive==="login"?'active':''}><Link to="login">Login</Link></li>
         </ul>
-        <div className='cart'>cart1</div>
+        <div className='cart'
+        ><Cart onclick={props.onclick}/></div>
        {
         !active ? <div className="toggle"
         onClick={toogle}>

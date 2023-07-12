@@ -1,0 +1,19 @@
+.cart{
+    display: flex;
+    font-size:17px;
+    gap:0.4rem;
+    background-color: brown;
+    padding: 0.2rem 0.3rem;
+    color:aliceblue;
+    border-radius: 45% 100%;
+    -webkit-border-radius: 45% 100%;
+    -moz-border-radius: 45% 100%;
+    -ms-border-radius: 45% 100%;
+    -o-border-radius: 45% 100%;
+  cursor: pointer;
+  z-index: 5;
+}
+.cart .quantity{
+    color:aqua;
+    font-weight: bold;
+}

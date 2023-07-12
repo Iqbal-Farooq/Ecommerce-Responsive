@@ -71,17 +71,16 @@ display: flex;
    
   
 }
-@media (max-width:700px){
-.inactive{
-        gap:1.7rem;
-
-    }
-   
-
+@media(max-width:1050px){
+    .inactive {
+            gap: 1.7rem;
     
+        }
 }
 
-@media(max-width:600px){
+
+
+@media(max-width:900px){
     .toggle {
             display: flex;
         }
