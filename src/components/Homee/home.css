@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: center;
   color:navy;
+  /*  */
 
 }
 .home{
@@ -12,6 +13,7 @@ background-color: darkgray;
 margin-top: 3.6rem;
     bottom: 3.7rem;
     padding: 1rem;
+   
 }
 .generics{
     padding:2rem;
@@ -60,4 +62,8 @@ margin-top: 3.6rem;
     .tables{
         flex-wrap: wrap;
     }
+        .home {
+            bottom:6rem;
+
+        }
 }

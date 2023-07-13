@@ -36,7 +36,7 @@ const removeHandler=(item)=>{
     let qnt=Number(existItem.quantity)
     if(qnt>1){
         const itemtobeupdated={...existItem,quantity:Number(existItem.quantity)-1};
-        console.log(itemtobeupdated);
+        // console.log(itemtobeupdated);
       updatedItem=[...items];
       updatedItem[existIndx]=itemtobeupdated;
     }else{

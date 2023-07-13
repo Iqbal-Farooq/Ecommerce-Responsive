@@ -12,7 +12,7 @@ const Cart = (props) => {
     <div className='cart'
     onClick={props.onclick}>
         <span>🛒</span>
-        <span>your-cart</span>
+        <span>items</span>
         <span className='quantity'>{quantity}</span>
     </div>
   )

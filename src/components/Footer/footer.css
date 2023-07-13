@@ -18,3 +18,14 @@
     display: flex;
     gap:2rem;
 }
+.links a{
+    font-size: 25px;
+}
+
+@media (max-width:600px){
+
+    .footer_container {
+           flex-direction: column;
+           gap:1rem;
+        }
+}

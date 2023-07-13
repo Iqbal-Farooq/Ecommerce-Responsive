@@ -7,10 +7,23 @@ import './cart.css'
 const CartItems = (props) => {
     const Ctx=useContext(Context);
     console.log("jj",Ctx.items);
+    let result=0;
+    Ctx.items.forEach((item)=>{
+      result+=item.price*item.quantity;
+
+    })
+    let total=result.toFixed(2);
+
   return (
     <Modal onclick={props.onclick}>
   <div className='cart_maincontainer'>
+  <div className='cart_header'>
+  <h2>cart data</h2>
+  <button onClick={props.onclick} className='btn  btn-primary '>x</button>
 
+
+  </div>
+  
        {Ctx.items.map((item)=>{return <div className='cart_container'>
               <div className="image">
               <img src={item.image} alt='' />
@@ -27,7 +40,8 @@ const CartItems = (props) => {
            </div>
 
            <div className="quantity">
-            q  {item.quantity}
+           <span className='x'>x </span>
+              {item.quantity}
            </div>
 
            <button
@@ -38,7 +52,17 @@ const CartItems = (props) => {
            
 
         </div>
-       })} 
+       })}
+       <div className='cart_bottom'>
+       <h2>total</h2>
+       <h2>Rs: {total}</h2>
+
+       </div>
+      {
+        Ctx.items.length>0 && <div className='order_btn'>
+        <button className='btn btn-primary'>order now</button>
+       </div>
+      } 
        </div>
     </Modal>
   )
