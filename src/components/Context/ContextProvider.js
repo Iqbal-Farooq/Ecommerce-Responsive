@@ -14,7 +14,7 @@ const ContextProvider = (props) => {
          let updatedItems;
         if(exist>=0){
               const  existItem=items[exist];
-        console.log(existItem, " qty");
+        // console.log(existItem, " qty");
             const updateditem={...existItem,quantity:Number(existItem.quantity)+1}
             updatedItems=[...items] ;
             updatedItems[exist]=updateditem;
@@ -22,20 +22,29 @@ const ContextProvider = (props) => {
         }
         else{
             updatedItems=[...items,{...item,quantity:1}]
-            // console.log(updatedItems,"cc");
-            // console.log(items);
-            // console.log(ctx.items);
-            
 
         }
         setItems(updatedItems);
-      
-        // setItems([...items,item])
+
+
     }
 const removeHandler=(item)=>{
+    const existIndx=items.findIndex((i)=>i.id ===item.id);
+    const existItem=items[existIndx];
+    console.log(existItem.quantity," quant");
+    let updatedItem;
+    let qnt=Number(existItem.quantity)
+    if(qnt>1){
+        const itemtobeupdated={...existItem,quantity:Number(existItem.quantity)-1};
+        console.log(itemtobeupdated);
+      updatedItem=[...items];
+      updatedItem[existIndx]=itemtobeupdated;
+    }else{
+        updatedItem=items.filter((i)=>i.id !== item.id)
+    }
    
- const updatedItems= items.filter(i=>i.id !== item.id);
- setItems(updatedItems);
+
+ setItems(updatedItem);
 }
     const contextdata={
         items:items,
