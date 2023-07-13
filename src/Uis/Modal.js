@@ -5,7 +5,7 @@ const Backdrop=props=>{ return <div className="backdrop" onClick={props.onclick}
 
 const ModalOverlay=props=>{
     return<div className="container modal_container" 
-    onClick={props.onclick}>
+    >
         <div className="">{props.children}</div>
     </div>
 }

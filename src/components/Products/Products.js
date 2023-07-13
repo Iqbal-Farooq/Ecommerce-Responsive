@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState,useContext } from 'react'
 import "./products.css"
+import Context from '../Context/Context';
 const Products = () => {
     const[data,SetData]=useState();
     const[render,SetRender]=useState(false);
+    const ctx=useContext(Context);
     // https://fakestoreapi.com/products
     //   const res=  fetch('https://dummyjson.com/products')
     useEffect( ()=>{
@@ -62,7 +64,8 @@ const Products = () => {
 
         </div>
        
-        <button className="btn btn-primary">Add To Cart</button>
+        <button className="btn btn-primary"
+        onClick={()=>ctx.addItem(data[items])}>Add To Cart</button>
 
         </div>
        

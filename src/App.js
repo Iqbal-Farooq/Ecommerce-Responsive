@@ -10,7 +10,6 @@ import Products from './components/Products/Products';
 import { useState } from 'react';
 import CartItems from './components/Cart/CartItems';
 
-
 function App() {
   const[showCart,setShowcart]=useState(false);
   const CartHandler=()=>{
