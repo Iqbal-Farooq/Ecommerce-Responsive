@@ -10,7 +10,7 @@ const ContextProvider = (props) => {
     
     const add=(item)=>{
         const exist=items.findIndex((items)=> items.id === item.id);
-        console.log(exist);
+        // console.log(exist);
          let updatedItems;
         if(exist>=0){
               const  existItem=items[exist];
@@ -31,7 +31,7 @@ const ContextProvider = (props) => {
 const removeHandler=(item)=>{
     const existIndx=items.findIndex((i)=>i.id ===item.id);
     const existItem=items[existIndx];
-    console.log(existItem.quantity," quant");
+    // console.log(existItem.quantity," quant");
     let updatedItem;
     let qnt=Number(existItem.quantity)
     if(qnt>1){
@@ -48,10 +48,11 @@ const removeHandler=(item)=>{
 }
     const contextdata={
         items:items,
-          totalAmount:0,
+         
          addItem:add,
-            
+    
           removeItem:removeHandler,
+          
 }
   return (
     <Context.Provider value={contextdata}>{props.children}</Context.Provider>

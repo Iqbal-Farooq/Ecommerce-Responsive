@@ -6,7 +6,7 @@ import './cart.css'
 
 const CartItems = (props) => {
     const Ctx=useContext(Context);
-    console.log("jj",Ctx.items);
+    // console.log("jj",Ctx.items);
     let result=0;
     Ctx.items.forEach((item)=>{
       result+=item.price*item.quantity;

@@ -2,10 +2,13 @@ import React, { useState,useEffect} from 'react'
 import {Link} from "react-router-dom"
 import "./nav.css"
 import Cart from '../Cart/Cart'
+import {LoginContext} from "../Login/AuthContext"
+import { useContext } from 'react'
 const Nav = (props) => {
   const[active,setActive]=useState(false);
   const [navActive,SetNavActive]=useState("#");
    const[screenSize,setScreenSize]=useState(currentWidth());
+   const ctx=useContext(LoginContext);
 
   const toogle=()=>{
     setActive(prev => !prev);
@@ -38,6 +41,13 @@ const Nav = (props) => {
     useEffect(()=>{
     setActive(false)
    },[navActive])
+
+
+   const LogoutHandler=()=>{
+    SetNavActive('#')
+ctx.logout()
+
+   }
   return (
     <div className='nav_container'>
      <div className='container nav_maincontainer'>
@@ -54,6 +64,10 @@ const Nav = (props) => {
    className={navActive==="contact"?'active':''}><Link to="contact">contact</Link></li>
              <li  onClick={()=>SetNavActive("login")}
    className={navActive==="login"?'active':''}><Link to="login">Login</Link></li>
+   {ctx.isLoggedIn && <li className=''
+   onClick={LogoutHandler}
+   ><Link to="">Logout</Link></li>}
+
         </ul>
         <div className='cart'
         ><Cart onclick={props.onclick}/></div>

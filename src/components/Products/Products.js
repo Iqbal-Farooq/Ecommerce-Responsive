@@ -10,10 +10,18 @@ const Products = () => {
     useEffect( ()=>{
         async function data(){
   let res=await fetch('https://fakestoreapi.com/products')
-  let data=await res.json();
-  SetData(data);
-  SetRender(true);
-  console.log(data);
+  
+  if(res.ok){
+    let data=await res.json();
+     await SetData(data);
+   await  SetRender(true);
+
+  }else{
+    SetRender(false);
+  }
+ 
+  
+  // console.log(data);
 
          
         }
@@ -28,6 +36,8 @@ const Products = () => {
   return (
    
     <div className="container product_container">
+
+    {!render && <span class="loader"></span> }
   
    
       {render && Object.keys(data).map((items)=>{return <div className="cards">

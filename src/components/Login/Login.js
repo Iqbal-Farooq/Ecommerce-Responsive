@@ -1,4 +1,7 @@
 import { useState,useRef, useEffect, useCallback} from "react"
+import { LoginContext } from "./AuthContext";
+import { useContext } from "react";
+
 
 import "./login.css"
 const Login = () => {
@@ -9,6 +12,9 @@ const Login = () => {
     const[password,setPassword]=useState('');
     const [isPasswordValid,setPasswordValid]=useState(false);
     const[passwordError,setPasswordError]=useState(true);
+
+    const ctx=useContext(LoginContext);
+
 
   
    let validateEmail=(email)=>{
@@ -82,11 +88,14 @@ const Login = () => {
       if(res.ok){
        
         alert("login success");
+        
           setEmail('');
                 setPassword('');
     
-        return res.json().then(data=>{console.log(data.idToken)
-          localStorage.setItem("token",data.idToken)
+        return res.json().then(data=>{
+          // console.log(data.idToken)
+          ctx.login(data.idToken)
+         
         });
       }else{
          return res.json().then((data)=>{console.log(data)
