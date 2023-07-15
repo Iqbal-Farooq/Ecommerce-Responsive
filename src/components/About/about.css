@@ -26,9 +26,9 @@
     max-width:700px;
 }
 .container_content p {
-    background-color: rgba(68, 67, 64, 0.072);
+    background-color:lightgrey ;
   
-    color:rgb(55, 68, 113);
+    color:rgb(67, 94, 193);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     
     padding:0 0.3rem;

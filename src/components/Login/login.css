@@ -79,6 +79,18 @@
     -ms-transition: .2s;
     -o-transition: .2s;
 }
+.input_blur:focus{
+    color:  rgba(248, 2, 2, 0.924);
+}
+.error{
+    width:100%;
+    padding:0 2rem;
+    margin:-1rem 0;
+    color:red;
+    font-size: 11px;
+ 
+}
+
 
 @media(max-width:600px) {
     .login_container form {
